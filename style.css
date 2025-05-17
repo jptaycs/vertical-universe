@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-section {
+    width: 100%;
+  }
+  
+  .long-image {
+    width: 100%;
+    display: block;
+  }
+  
+    .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: red;
+  }
+  .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Puts video behind text */
+}
+
+  .bottom-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .bottom-section h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  }
+  .bottom-section p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #c0392b;
+  }
+  
+#altitude-indicator {
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+
+.altitude-line {
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.507);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.altitude-text {
+  margin-top: 8px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px black;
+}
